@@ -110,13 +110,17 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
                 {type === "update" ? "Update" : "Add"} Note
               </h1>
               <label htmlFor="title">
-                Keep your notes here
-                <input
+                Keep your notes here<br/>
+                
+                <textarea
+                rows={5}
+                placeholder="Note"
+                className={styles.textarea}
                   type="text"
                   id="title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                />
+                /><br/>
               </label>
               <label htmlFor="type">
                 Status
